@@ -8,7 +8,7 @@
             <!-- Main content -->
             <slot></slot>
         </el-main>
-        <el-footer height="100px">
+        <el-footer :height="bgHeight">
             <!-- Footer content -->
             <slot name="my-footer"></slot>
         </el-footer>
@@ -22,9 +22,14 @@ export default {
     name: 'MyContainer',
     data () {
         return {
-
-        }
-    }
+            bgHeight: document.body.clientWidth / 1440 * 650 + 'px',
+        };
+    },
+    mounted() {
+       window.onresize = function(){
+           this.bgHeight = document.body.clientWidth / 1440 * 650 + 'px';
+       } ;
+    },
 }
 </script>
 
@@ -33,8 +38,12 @@ export default {
         margin-top: -60px;
     }
     .el-footer {
-        background-color: aquamarine;
-        margin-top: 100px;
+        background-image: url('../../assets/images/home/底部.png');
+        background-position: top;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 100%;
     }
     .el-header, .el-footer, .el-main {
         padding: 0;

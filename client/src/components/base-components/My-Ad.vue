@@ -1,12 +1,11 @@
 <template>
-    <div>
-
-    </div>
+    <img :src="ad.src" :alt="ad.title">
 </template>
 
 <script>
 export default {
-    name: 'MyFooter',
+    name: 'My-Ad',
+    props: [ 'ad' ],
     data () {
         return {
 
