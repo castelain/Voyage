@@ -1,14 +1,20 @@
 <template>
     <div>
-        <my-card v-for="(img, index) in imgs2" 
-                :key="index" :img="img" 
-                :isSlideLeft='isSlideLeft' :isSlideRight="isSlideRight">
-        </my-card>
+        <el-row :gutter="20" >
+            <el-col :span="8"
+                    v-for="(img, index) in imgs2" 
+                    :key="index">
+                <my-card-vertical
+                        :img="img" 
+                        :isSlideLeft='isSlideLeft' :isSlideRight="isSlideRight">
+                </my-card-vertical>
+            </el-col>
+        </el-row>
         <hr>
         <div class="btns">
             <el-button icon="el-icon-arrow-left" @click="forward" id="left-btn" circle>
             </el-button>
-            <my-button :btnText="btnText"></my-button>
+            <my-button :btnText="btnText" :path="path"></my-button>
             <el-button icon="el-icon-arrow-right" @click="back" id="right-btn" circle>
             </el-button>
         </div>
@@ -19,7 +25,7 @@
 import 'element-ui/lib/theme-chalk/display.css'
 export default {
     name: 'SlideImages',
-    props: [ 'imgs', 'btnText' ],
+    props: [ 'imgs', 'btnText', 'path' ],
     data () {
         return {
             imgs1: this.imgs, // 用于记录传入的参数 imgs 以及操作后的完整数据值（数组）
@@ -70,7 +76,7 @@ export default {
     }
     .btns {
         margin-top: 40px;
-        margin-bottom: 80px;
+        /* margin-bottom: 80px; */
     }
 
 </style>

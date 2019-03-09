@@ -35,7 +35,7 @@ export default {
 
 <style scoped>
     .el-header {
-        margin-top: -60px;
+        margin-top: -50px;
     }
     .el-footer {
         background-image: url('../../assets/images/home/底部.png');
@@ -44,6 +44,7 @@ export default {
         background-size: cover;
         width: 100%;
         height: 100%;
+        position: relative;
     }
     .el-header, .el-footer, .el-main {
         padding: 0;

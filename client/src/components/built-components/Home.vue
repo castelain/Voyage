@@ -1,18 +1,37 @@
 <template>
     <my-container>
-        <my-header slot="my-header"></my-header>
+        <my-header slot="my-header" id="nav"></my-header>
 
-        <single-banner :img="img"></single-banner>
+        <single-banner :img="img" id="banner"></single-banner>
         <my-row>
             <my-patter :title="title1" slot="content"></my-patter>
         </my-row>
         <my-row>
-            <slide-images :imgs="travelData" :btnText="btnText" slot="content"></slide-images>
+            <slide-images :imgs="travelData" :btnText="btnText" :path="path" slot="content"></slide-images>
         </my-row>
         <my-row>
             <my-ad :ad="ad1" slot="content"></my-ad>
         </my-row>
-
+        <my-row>
+            <my-patter :title="title2" slot="content"></my-patter>
+        </my-row>
+        <my-row v-for="(item, index) in activityData" :key="index">
+            <my-card-horizontal :data="item" slot="content" >
+            </my-card-horizontal>
+        </my-row>
+        <my-row>
+            <my-ad :ad="ad2" slot="content"></my-ad>
+        </my-row>
+        <my-row>
+            <my-patter :title="title3" slot="content">
+                <span v-html="subTitle">
+                </span>
+            </my-patter>
+        </my-row>
+        <my-row>
+            <my-photos slot="content"></my-photos>
+        </my-row>
+        
         <my-footer slot="my-footer"></my-footer>
     </my-container>
 </template>
@@ -20,10 +39,13 @@
 <script>
 import SingleBanner from '@/components/base-components/Single-Banner'
 import SlideImages from '@/components/base-components/Slide-Images'
+import MyPhotos from '@/components/base-components/My-Photos'
 export default {
     name: 'Home',
     data () {
         return {
+            // 导航栏的高度
+            navHeight: null,
             // banner图数据
             img: {
                 src: require('../../assets/images/home/banner.png'),
@@ -33,9 +55,11 @@ export default {
             // 推荐旅行数据
             title1: '推荐旅行',
             btnText: '查 看 更 多', 
+            path: '/recomment-travel',
             travelData: [
                 {
                     src: require('../../assets/images/home/travel1.png'),
+                    path: '#',
                     msg: {
                         point: 'TAIWAN101',
                         title: '台 北 馥 敦 饭 店',
@@ -45,6 +69,7 @@ export default {
                 },
                 {
                     src: require('../../assets/images/home/travel2.png'),
+                    path: '#',
                     msg: {
                         point: 'MAPLE LEAF',
                         title: '日 本 香 山 公 园',
@@ -54,6 +79,7 @@ export default {
                 },
                 {
                     src: require('../../assets/images/home/travel3.png'),
+                    path: '/travel-detail',
                     msg: {
                         point: 'PRIVATE ISLAND',
                         title: 'Kudadoo 私 人 岛 屿',
@@ -65,15 +91,50 @@ export default {
             ],
             // 广告位1数据
             ad1: {
+                src: require('../../assets/images/home/ad1.png'),
+                title: '这有一个广告',
+                detailPath: '#'
+            },
+            // 广告位2数据
+            ad2: {
                 src: require('../../assets/images/home/ad2.png'),
-                title: '这有一个广告'
-            }
+                title: '这有一个广告',
+                detailPath: '#'
+            },
+            // 活动体验数据
+            title2: '活动数据',
+            activityData: [
+                {
+                    title: '水城威尼斯之旅',
+                    description: '威尼斯(Venice)，意大利旅游城市，世界著名的历史文化名城威尼斯因”饮水而生，因水而美，因水而兴“的美誉，享有”水城“、”水上都市“、”白岛城“等美称。上帝将眼泪流在了这里，却让它更加晶莹和柔情，就好像一个漂浮在碧波上浪漫的梦。',
+                    btnText: '即刻出发',
+                    imgSrc: require('../../assets/images/home/activity1.png'),
+                    imgPosLeft: true 
+                },
+                {
+                    title: '塞舌尔度假海岛',
+                    description: '有人评价，如果说马尔大夫是人间天堂，塞舌尔就是世外仙境，塞舌尔除了拥有和马尔代夫一样水清沙幼的海滩和奢华度假村之外，游客更少，私密性高、还拥有世界一流的天然浴场。《孤独星球》评选塞舌尔为”最佳旅游地“之一。',
+                    btnText: '即刻出发',
+                    imgSrc: require('../../assets/images/home/activity2.png'),
+                    imgPosLeft: false 
+                }
+            ],
+            // 完美瞬间部分数据
+            title3: '完美瞬间',
+            subTitle: `由VOYAGE<br>活动体验游客拍摄`,
+            
         }
     },
     components: {
         'single-banner': SingleBanner,
-        'slide-images': SlideImages
-    }
+        'slide-images': SlideImages,
+        'my-photos': MyPhotos
+    },
+    mounted() {
+        let nav = document.getElementById('nav');
+        this.navHeight = window.getComputedStyle(nav).height;
+        document.getElementById('banner').style.marginTop = this.navHeight;
+    },
 }
 </script>
 

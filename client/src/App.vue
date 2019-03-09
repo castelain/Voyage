@@ -1,6 +1,7 @@
 <template>
-  <div id="app">
+  <div id="app" class="content-container">
     <router-view/>
+    <my-side-btn></my-side-btn>
   </div>
 </template>
 

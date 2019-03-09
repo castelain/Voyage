@@ -8,11 +8,18 @@ import 'element-ui/lib/theme-chalk/index.css'
 import MyContainer from '@/components/layout-components/My-Container'
 import MyRow from '@/components/layout-components/My-Row'
 import MyPatter from '@/components/base-components/My-Patter'
+import MyPatterVertical from '@/components/base-components/My-Patter-Vertical'
 import MyHeader from '@/components/base-components/My-Header'
 import MyFooter from '@/components/base-components/My-Footer'
-import MyCard from '@/components/base-components/My-Card'
+import MyCardVertical from '@/components/base-components/My-Card-Vertical'
+import MyCardHorizontal from '@/components/base-components/My-Card-Horizontal'
+import MyCardIcon from '@/components/base-components/My-Card-Icon'
+import MyCardSimple from '@/components/base-components/My-Card-Simple'
 import MyButton from '@/components/base-components/My-Button'
 import MyAd from '@/components/base-components/My-Ad'
+import MySideBtn from '@/components/base-components/My-Side-Btn'
+import MyNavInner from '@/components/base-components/My-Nav-Inner'
+import MyFieldset from '@/components/base-components/My-Fieldset'
 import './assets/styles/global.css'
 
 // 全局注册组件
@@ -21,9 +28,16 @@ Vue.component('my-row', MyRow)
 Vue.component('my-header', MyHeader)
 Vue.component('my-footer', MyFooter)
 Vue.component('my-patter', MyPatter)
-Vue.component('my-card', MyCard)
+Vue.component('my-card-vertical', MyCardVertical)
+Vue.component('my-card-horizontal', MyCardHorizontal)
+Vue.component('my-card-simple', MyCardSimple)
+Vue.component('my-card-icon', MyCardIcon)
 Vue.component('my-button', MyButton)
 Vue.component('my-ad', MyAd)
+Vue.component('my-side-btn', MySideBtn)
+Vue.component('my-nav-inner', MyNavInner)
+Vue.component('my-patter-vertical', MyPatterVertical)
+Vue.component('my-fieldset', MyFieldset)
 
 Vue.config.productionTip = false
 

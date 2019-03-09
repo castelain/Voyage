@@ -1,5 +1,5 @@
 <template>
-    <el-button plain @click="loadMore">
+    <el-button plain @click="loadMore(path)">
         {{ btnText }}
     </el-button>
 </template>
@@ -7,16 +7,18 @@
 <script>
 export default {
     name: 'MyButton',
-    props: [ 'btnText' ],
+    props: [ 'btnText', 'path' ],
     data () {
         return {
-
+            toTopShow: false
         }
     },
     methods: {
-        loadMore: function(){
-
-        }
+        loadMore: function(path){
+            if(path){
+                this.$router.push(path);
+            }
+        },
     },
 }
 </script>
@@ -28,7 +30,7 @@ export default {
     }
     .el-button {
         border-radius: 10px;
-        border-color: rgb(67, 67, 67);
+        border-color: rgb(160, 160, 160);
         width: 160px;
         height: 40px;
     }

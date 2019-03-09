@@ -1,8 +1,8 @@
 <template>
-    <div>
+    <div class="fixed nav" id="nav">
         <el-row>
-            <el-col :xs="0" :sm="4" :md="6" :lg="11" :xl="9">&nbsp;</el-col>
-            <el-col :xs="24" :sm="12" :md="12" :lg="8" :xl="11">
+            <el-col :xs="0" :sm="4" :md="6" :lg="10" :xl="9">&nbsp;</el-col>
+            <el-col :xs="24" :sm="12" :md="12" :lg="9" :xl="11">
                 <ul class="nav-1">
                     <li v-for="(item,index) in navItems1" :key="index" :id="item.msg">
                         <router-link :to="item.src">
@@ -20,11 +20,12 @@
         </el-row>
         
         <my-row>
-            <img src="../../assets/images/home/logo.png" alt="logo" slot="logo">
             <el-menu mode="horizontal" :default-active="activeIndex" @select="handleSelect" router slot="content" class="nav-2">
+                <router-link to="/">
+                    <img src="../../assets/images/home/logo.png" alt="logo" class="logo hidden-sm-and-down">
+                </router-link>
                 <el-menu-item :index="item.src" v-for="(item, index) in navItems2" :key="index">
                     {{ item.msg }}
-                    <!-- <span>|</span> -->
                 </el-menu-item>
             </el-menu>
         </my-row>
@@ -43,16 +44,16 @@ export default {
                 { msg: '登录', src: '/login' },
                 { msg: '注册', src: '/regist' },
                 { msg: '中文', src: '/chinese' },
-                { msg: 'ENGLISH', src: '/english' }
+                { msg: 'ENGLISH', src: '/english' },
+                { msg: '关于我们', src: '/aboutUs'}
             ],
             navItems2: [
                 { msg: '首页', src: '/' },
-                { msg: '旅行随拍', src: '/photos' },
+                { msg: '旅行随拍', src: '/travel-photos' },
                 { msg: '酒店', src: '/hotel' },
                 { msg: '机票', src: '/tickets' },
                 { msg: '活动体验', src: '/activity'},
-                { msg: '私人订制', src: '/design' },
-                { msg: '关于我们', src: '/aboutUs'}
+                { msg: '私人订制', src: '/private-order' }
             ],
         }
     },
@@ -62,10 +63,9 @@ export default {
         }
     },
     mounted() {
-        let el = document.getElementById('ENGLISH');
+        let el = document.getElementById('中文');
         let links = el.getElementsByTagName('a');
         links[0].style.color = 'rgb(191,191,191)';
-        // console.log(el);
     },
 }
 </script>
@@ -75,14 +75,24 @@ export default {
     * {
         color: #333333;
     }
+    .nav {
+        background-color: white;
+        width: 100%;
+    }
+    .fixed {
+        position: fixed;
+        z-index: 100;
+        top: 0;
+    }
     .nav-1 {
         list-style: none;
-        color: black;
+        color: rgb(67, 67, 67);
         font-size: 12px;
     }
     .nav-1 > li {
         margin-right: 25px;
         display: inline-block;
+        margin-top: 6px;
     }
     .nav-1 span {
         margin-left: 25px;
@@ -102,9 +112,13 @@ export default {
         margin-right: 45px;
     }
     img {
-        margin-top: -36px;
+        float: left;
     }
     .el-input {
         margin-top: 6px;
+    }
+    .logo {
+        margin-right: 20px;
+        margin-top: -32px;
     }
 </style>

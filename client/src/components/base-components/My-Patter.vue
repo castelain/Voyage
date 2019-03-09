@@ -1,15 +1,31 @@
 <template>
     <div class="patter">
-        <hr class="left-line">
-        <span class="title">{{ title }}</span>
-        <hr class="right-line">    
+        <el-row>
+            <el-col :span="9" class="hidden-xs-and-down">
+                <hr>
+            </el-col>
+            <el-col :span="6">
+                <span class="title">{{ title }}</span>
+            </el-col>
+            <el-col :span="9" class="hidden-xs-and-down">
+                <hr>
+            </el-col>
+        </el-row>
+        <el-row>
+            <el-col :span="9">&nbsp;</el-col>
+            <el-col :span="6">
+                <slot class="subTitle"></slot>
+            </el-col>
+            <el-col :span="9">&nbsp;</el-col>
+        </el-row>
     </div>
 </template>
 
 <script>
+import 'element-ui/lib/theme-chalk/display.css';
 export default {
     name: 'My-Patter',
-    props: [ 'title' ],
+    props: [ 'title', 'subTitle' ],
     data () {
         return {
 
@@ -21,12 +37,7 @@ export default {
 <style scoped>
     .patter {
         margin-top: 80px;
-        margin-bottom: 150px;
-        position: relative;
-    }
-    hr {
-        display: inline-block;
-        width: 40%;
+        margin-bottom: 25px;
     }
     .left-line {
         float: left;
@@ -37,8 +48,13 @@ export default {
     .title {
         font-size: 30px;
         color: rgb(67, 67, 67);
-        position: absolute;
-        bottom: -30px;
-        left: 43%;
+        text-align: center;
+        position: relative;
+        top: -15px;
+    }
+    .sub-title {
+        margin-top: 30px;
+        margin-bottom: 30px;
+        color: rgb(160, 160, 160);
     }
 </style>
