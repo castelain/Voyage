@@ -9,6 +9,8 @@ import AboutUs from '@/components/built-components/About-Us'
 import Login from '@/components/built-components/Login'
 import Register from '@/components/built-components/Register'
 import UserInformation from '@/components/built-components/User-Information'
+import Activity from '@/components/built-components/Activity'
+import FujiActivity from '@/components/built-components/Fuji-Activity'
 
 Vue.use(Router)
 
@@ -58,6 +60,16 @@ export default new Router({
       path: '/user-information/:phone',
       name: 'user-information',
       component: UserInformation
+    },
+    {
+      path: '/activity',
+      name: 'activity',
+      component: Activity
+    },
+    {
+      path: '/fuji-activity',
+      name: 'fuji-activity',
+      component: FujiActivity
     }
   ]
 })

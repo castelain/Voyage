@@ -1,5 +1,5 @@
 <template>
-    <my-container class="no-overflow">
+    <my-container>
         <my-header slot="my-header" id="nav"></my-header>
 
         <my-row id="navs">
@@ -84,17 +84,12 @@
                         </el-col>
                     </el-row>
                     <el-row>
-                        <el-col :span="24" style="margin-top: 80px; text-align: center; margin-bottom: 20px;">
+                        <el-col :span="24" id="share">
                             <my-button btnText="SHARE"></my-button>
                         </el-col>
                     </el-row>
                 </el-col>
-            </el-row>
-            
-        </my-row>
-        
-        <my-row>
-
+            </el-row>           
         </my-row>
 
         <my-footer slot="my-footer"></my-footer>
@@ -102,7 +97,6 @@
 </template>
 
 <script>
-import SingleBanner from '@/components/base-components/Single-Banner'
 export default {
     name: 'Travel-Detail',
     data () {
@@ -153,9 +147,6 @@ export default {
             }
         }
     },
-    components: {
-        'single-banner': SingleBanner
-    },
     mounted() {
         let nav = document.getElementById('nav');
         this.navHeight = window.getComputedStyle(nav).height;
@@ -173,8 +164,10 @@ export default {
 </script>
 
 <style scoped>
-    .no-overflow {
-        overflow-y: hidden;
+    .share {
+        margin-top: 80px;
+        text-align: center;
+        margin-bottom: 20px;
     }
     #side button {
         margin-top: 10px;

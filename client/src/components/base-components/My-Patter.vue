@@ -25,7 +25,7 @@
 import 'element-ui/lib/theme-chalk/display.css';
 export default {
     name: 'My-Patter',
-    props: [ 'title', 'subTitle' ],
+    props: [ 'title' ],
     data () {
         return {
 

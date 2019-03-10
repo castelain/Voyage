@@ -24,7 +24,7 @@
             </div>
         </my-row>
         <my-button :btnText="btnText" style="margin-bottom: 50px;"></my-button>
-        <my-row style="margin-bottom: 100px;">
+        <my-row  style="margin-bottom: 10%;">
             <my-ad :ad="ad" slot="content"></my-ad>
         </my-row>
 

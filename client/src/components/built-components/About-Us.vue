@@ -32,7 +32,7 @@
             </div>
         </my-row>
 
-        <my-row style="margin-bottom: 80px;">
+        <my-row  style="margin-bottom: 10%;">
             <div slot="content">
                 <my-patter :title="contact.title"></my-patter>
                 <el-row :gutter="80">
