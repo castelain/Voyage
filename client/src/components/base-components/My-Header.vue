@@ -1,8 +1,8 @@
 <template>
     <div class="fixed nav" id="nav">
         <el-row>
-            <el-col :xs="0" :sm="4" :md="6" :lg="10" :xl="9">&nbsp;</el-col>
-            <el-col :xs="24" :sm="12" :md="12" :lg="9" :xl="11">
+            <el-col :xs="0" :sm="4" :md="6" :lg="8" :xl="9">&nbsp;</el-col>
+            <el-col :xs="24" :sm="12" :md="12" :lg="11" :xl="11">
                 <ul class="nav-1">
                     <li v-for="(item,index) in navItems1" :key="index" :id="item.msg">
                         <router-link :to="item.src">
@@ -42,10 +42,10 @@ export default {
             activeIndex: this.$route.path,
             navItems1: [
                 { msg: '登录', src: '/login' },
-                { msg: '注册', src: '/regist' },
+                { msg: '注册', src: '/register' },
                 { msg: '中文', src: '/chinese' },
                 { msg: 'ENGLISH', src: '/english' },
-                { msg: '关于我们', src: '/aboutUs'}
+                { msg: '关于我们', src: '/about-us'}
             ],
             navItems2: [
                 { msg: '首页', src: '/' },
@@ -66,6 +66,21 @@ export default {
         let el = document.getElementById('中文');
         let links = el.getElementsByTagName('a');
         links[0].style.color = 'rgb(191,191,191)';
+
+        // 根据是否登录，来更改导航
+        if(localStorage.getItem('isLogined')){
+            this.navItems1[0] =  { msg: localStorage.getItem('phone'), src: '/user-information/' + localStorage.getItem('phone') };
+            this.navItems1.push({ msg: '登出', src: '' });
+
+            this.$nextTick(function(){
+                let logOut = document.getElementById('登出');
+                logOut.addEventListener('click', function(){
+                    localStorage.removeItem('isLogined');
+                    location.reload();
+                });
+            })
+        }
+
     },
 }
 </script>

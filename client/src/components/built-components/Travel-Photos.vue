@@ -6,26 +6,27 @@
         <my-row>
             <my-patter :title="recommentData.title" slot="content" style="margin-top: 80px; margin-bottom: 10px;"></my-patter>
         </my-row>
+
         <my-row>
-            <img :src="recommentData.src" alt="推荐风景图" slot="content">
+            <div slot="content">
+                <img :src="recommentData.src" alt="推荐风景图" class="full-image">
+                <p style="font-size: 30px; margin-top: 50px; margin-bottom: 30px;">{{ recommentData.subTitle }}</p>
+                <p style="font-size: 18px; color: rgb(67, 67, 67); margin-bottom: 70px;">{{ recommentData.description }}</p>
+            </div>
         </my-row>
+        
         <my-row>
-            <p style="font-size: 30px; margin-top: 50px; margin-bottom: 30px;" slot="content">{{ recommentData.subTitle }}</p>
+            <div slot="content">
+                <my-patter :title="title" style=" margin-bottom: 40px; margin-top: 10px;"></my-patter>
+                <el-row :gutter="20">
+                    <el-col :span="8" v-for="(img, index) in imgs" :key="index" style="margin-top: -20px;">
+                        <my-card-simple :img="img">
+                        </my-card-simple>
+                    </el-col>
+                </el-row> 
+            </div> 
         </my-row>
-        <my-row>
-            <p style="font-size: 18px; color: rgb(67, 67, 67); margin-bottom: 70px;" slot="content">{{ recommentData.description }}</p>
-        </my-row>
-        <my-row>
-            <my-patter :title="title" slot="content" style=" margin-bottom: 40px;"></my-patter>
-        </my-row>
-        <my-row>
-            <el-row slot="content" :gutter="20">
-                <el-col :span="8" v-for="(img, index) in imgs" :key="index" style="margin-top: -20px;">
-                    <my-card-simple :img="img">
-                    </my-card-simple>
-                </el-col>
-            </el-row>  
-        </my-row>
+
         <my-footer slot="my-footer"></my-footer>
     </my-container>
 </template>

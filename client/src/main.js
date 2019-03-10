@@ -20,6 +20,7 @@ import MyAd from '@/components/base-components/My-Ad'
 import MySideBtn from '@/components/base-components/My-Side-Btn'
 import MyNavInner from '@/components/base-components/My-Nav-Inner'
 import MyFieldset from '@/components/base-components/My-Fieldset'
+import SingleBanner from '@/components/base-components/Single-Banner'
 import './assets/styles/global.css'
 
 // 全局注册组件
@@ -38,6 +39,7 @@ Vue.component('my-side-btn', MySideBtn)
 Vue.component('my-nav-inner', MyNavInner)
 Vue.component('my-patter-vertical', MyPatterVertical)
 Vue.component('my-fieldset', MyFieldset)
+Vue.component('single-banner', SingleBanner)
 
 Vue.config.productionTip = false
 

@@ -121,7 +121,6 @@
 </template>
 
 <script>
-import SingleBanner from '@/components/base-components/Single-Banner'
 export default {
     name: 'PrivateOrder',
     data () {
@@ -185,7 +184,7 @@ export default {
                         path: '#',
                         msg: {
                             title: '酒 店 安 排',
-                            description: '设计师根据您的预算精心挑选安排的当地最具特色的精品酒店，选择标准为地理位置极佳，风景视野几号，房间足够特色和宽敞，服务和口碑一流。'
+                            description: '设计师根据您的预算精心挑选安排的当地最具特色的精品酒店，选择标准为地理位置极佳，风景视野好，房间足够特色和宽敞，服务和口碑一流。'
                         }
                     },
                     {
@@ -268,9 +267,6 @@ export default {
             code: require('../../assets/images/private-order/03.二维码.jpg')
 
         }
-    },
-    components: {
-        'single-banner': SingleBanner
     },
     methods: {
         // 定制表单提交

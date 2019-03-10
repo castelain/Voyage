@@ -9,3 +9,9 @@
 .right {
     float: right;
 }
+.el-row {
+    width: 100%;
+}
+.full-image {
+    width: 100%;
+}
