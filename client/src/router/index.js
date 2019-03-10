@@ -11,6 +11,9 @@ import Register from '@/components/built-components/Register'
 import UserInformation from '@/components/built-components/User-Information'
 import Activity from '@/components/built-components/Activity'
 import FujiActivity from '@/components/built-components/Fuji-Activity'
+import PlaneTicket from '@/components/built-components/Plane-Ticket'
+import Hotel from '@/components/built-components/Hotel'
+import HotelSearch from '@/components/built-components/Hotel-Search'
 
 Vue.use(Router)
 
@@ -70,6 +73,21 @@ export default new Router({
       path: '/fuji-activity',
       name: 'fuji-activity',
       component: FujiActivity
+    },
+    {
+      path: '/plane-ticket',
+      name: 'plane-ticket',
+      component: PlaneTicket
+    },
+    {
+      path: '/hotel',
+      name: 'hotel',
+      component: Hotel
+    },
+    {
+      path: '/hotel-search',
+      name: 'hotel-search',
+      component: HotelSearch
     }
   ]
 })

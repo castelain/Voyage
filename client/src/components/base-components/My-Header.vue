@@ -51,7 +51,7 @@ export default {
                 { msg: '首页', src: '/' },
                 { msg: '旅行随拍', src: '/travel-photos' },
                 { msg: '酒店', src: '/hotel' },
-                { msg: '机票', src: '/tickets' },
+                { msg: '机票', src: '/plane-ticket' },
                 { msg: '活动体验', src: '/activity'},
                 { msg: '私人订制', src: '/private-order' }
             ],
