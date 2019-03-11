@@ -59,8 +59,8 @@
         <my-row>
             <div slot="content">
                 <my-patter :title="title"></my-patter>
-                <el-row :gutter="20">
-                    <el-col :span="8" v-for="(hotel, index) in hotels" :key="index">
+                <el-row>
+                    <el-col :span="8" v-for="(hotel, index) in hotels" :key="index" class="grid-inner">
                         <my-card-vertical :img="hotel">
                         </my-card-vertical>
                         <div class="price-block">

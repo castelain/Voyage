@@ -2,7 +2,7 @@
   <my-row class="bg">
     <el-form :model="form" ref="form" :rules="rules" slot="content">
       <router-link to="/">
-        <img src="../../assets/images/home/logo.png" alt="logo">
+        <img src="../../assets/images/login/login-logo.png" alt="logo">
       </router-link>
       <p class="title">登录VOYAGE，追寻梦和远方</p>
       <el-row :gutter="20">
@@ -25,8 +25,8 @@
             <el-button type="success" @click="login(form)" id="login">登&nbsp;录</el-button>
           </el-form-item>
         </el-col>
-        <el-col :span="10" class="hidden-md-and-down">
-          <img  v-for="(way, index) in otherWays" :key="index" :src="way.src" :alt="way.msg" style="margin-bottom: 18px;">
+        <el-col :span="10" class="hidden-md-and-down" id="otherWays">
+          <img v-for="(way, index) in otherWays" :key="index" :src="way.src" :alt="way.msg" title="暂不支持这种登录方式">
           <p>没有账号？
             <router-link to="/register" style="color: green;">注册</router-link>
           </p>
@@ -58,15 +58,15 @@ export default {
       },
       otherWays: [
         {
-          src: require('../../assets/images/login/weibo.jpg'),
+          src: require('../../assets/images/login/weibo.png'),
           msg: '微博登录'
         },
         {
-          src: require('../../assets/images/login/QQ.jpg'),
+          src: require('../../assets/images/login/QQ.png'),
           msg: 'QQ登录'
         },
         {
-          src: require('../../assets/images/login/weixin.jpg'),
+          src: require('../../assets/images/login/weixin.png'),
           msg: '微信登录'
         }
       ]
@@ -131,5 +131,8 @@ export default {
   font-size: 20px;
   color: white;
   margin: 30px auto;
+}
+#otherWays > img {
+  margin-bottom: 18px; border-radius: 6px;
 }
 </style>

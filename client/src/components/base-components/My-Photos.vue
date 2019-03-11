@@ -1,7 +1,7 @@
 <template>
     <div>
-        <el-row :gutter="20">
-            <el-col :span="8">
+        <el-row>
+            <el-col :span="8" class="grid-left">
                 <el-row>
                     <el-col :span="24">
                         <router-link to="#">
@@ -32,8 +32,8 @@
                 </el-row>
             </el-col>
             <el-col :span="16">
-                <el-row style="margin-bottom: -20px;">
-                    <el-col :span="24">
+                <el-row>
+                    <el-col :span="24" class="grid-right">
                         <router-link to="#">
                             <el-tooltip class="item" effect="dark" :content="imgs[3].msg" placement="top">
                                 <img :src="imgs[3].src">
@@ -41,10 +41,10 @@
                         </router-link>
                     </el-col>
                 </el-row>
-                <el-row :gutter="20">
+                <el-row>
                     <el-col :span="12">
                         <el-row>
-                            <el-col :span="24"  style="margin-top: 20px;">
+                            <el-col :span="24" class="grid-inner">
                                 <router-link to="#">
                                     <el-tooltip class="item" effect="dark" :content="imgs[4].msg" placement="top">
                                         <img :src="imgs[4].src">
@@ -53,7 +53,7 @@
                             </el-col>
                         </el-row>
                         <el-row>
-                            <el-col :span="24">
+                            <el-col :span="24" class="grid-inner">
                                 <router-link to="#">
                                     <el-tooltip class="item" effect="dark" :content="imgs[5].msg" placement="top">
                                         <img :src="imgs[5].src">
@@ -62,9 +62,9 @@
                             </el-col>
                         </el-row>
                     </el-col>
-                    <el-col :span="12">
+                    <el-col :span="12" class="grid-right">
                         <el-row>
-                            <el-col :span="24"  style="margin-top: 20px;">
+                            <el-col :span="24">
                                 <router-link to="#">
                                     <el-tooltip class="item" effect="dark" :content="imgs[6].msg" placement="top">
                                         <img :src="imgs[6].src">
@@ -86,7 +86,6 @@
             </el-col> 
         </el-row>
         <my-button btnText="欣赏更多" class="last-bottom"></my-button>
-
     </div>
 </template>
 
@@ -106,7 +105,13 @@ export default {
     .el-row {
         margin-bottom: 20px;
     }
+    .el-row:last-child {
+        margin-bottom: 0;
+    }
     img {
         width: 100%; 
+    }
+    .last-bottom {
+        margin-top: 6%;
     }
 </style>

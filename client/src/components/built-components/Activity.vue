@@ -7,15 +7,15 @@
             <div slot="content" style="margin-bottom: 10%;">
                 <my-patter :title="title"></my-patter>
 
-                <el-row :gutter="20">
-                    <el-col :span="12">
+                <el-row>
+                    <el-col :span="12" class="grid-left">
                         <el-row>
                             <el-col :span="24" v-for="(card, index) in activityData.slice(0, 3)" :key="index">
                                 <my-card-vertical :img="card"></my-card-vertical>
                             </el-col>
                         </el-row>
                     </el-col>
-                    <el-col :span="12" style="margin-top: 20%;">
+                    <el-col :span="12" style="margin-top: 20%;" class="grid-right">
                         <el-row>
                             <el-col :span="24" v-for="(card, index) in activityData.slice(3, 6)" :key="index">
                                 <my-card-vertical :img="card"></my-card-vertical>

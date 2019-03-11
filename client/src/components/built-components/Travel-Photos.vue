@@ -4,27 +4,19 @@
 
         <single-banner :img="img" id="banner"></single-banner>
         <my-row>
-            <my-patter :title="recommentData.title" slot="content" style="margin-top: 80px; margin-bottom: 10px;"></my-patter>
-        </my-row>
-
-        <my-row>
             <div slot="content">
+                <my-patter :title="recommentData.title" class="recomment"></my-patter>
                 <img :src="recommentData.src" alt="推荐风景图" class="full-image">
-                <p style="font-size: 30px; margin-top: 50px; margin-bottom: 30px;">{{ recommentData.subTitle }}</p>
-                <p style="font-size: 18px; color: rgb(67, 67, 67); margin-bottom: 70px;">{{ recommentData.description }}</p>
-            </div>
-        </my-row>
-        
-        <my-row>
-            <div slot="content">
-                <my-patter :title="title" style=" margin-bottom: 40px; margin-top: 10px;"></my-patter>
-                <el-row :gutter="20">
-                    <el-col :span="8" v-for="(img, index) in imgs" :key="index" style="margin-top: -20px;">
+                <p class="subTitle">{{ recommentData.subTitle }}</p>
+                <p class="title">{{ recommentData.description }}</p>
+                <my-patter :title="title" style="margin-bottom: 40px; margin-top: 10px;"></my-patter>
+                <el-row>
+                    <el-col :span="8" v-for="(img, index) in imgs" :key="index" style="margin-top: -20px;" class="grid-inner">
                         <my-card-simple :img="img">
                         </my-card-simple>
                     </el-col>
                 </el-row> 
-            </div> 
+            </div>
         </my-row>
 
         <my-footer slot="my-footer"></my-footer>
@@ -143,5 +135,18 @@ export default {
 </script>
 
 <style scoped>
-
+    .recommend {
+        margin-top: 80px;
+        margin-bottom: 10px;
+    }
+    .title {
+        font-size: 18px;
+        color: rgb(67, 67, 67);
+        margin-bottom: 70px;
+    }
+    .subTitle {
+        font-size: 30px;
+        margin-top: 50px;
+        margin-bottom: 30px;
+    }
 </style>

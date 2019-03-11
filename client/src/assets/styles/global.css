@@ -18,3 +18,14 @@
 .last-bottom {
     margin-bottom: 10%;
 }
+/* 用于栅格布局 */
+.grid-left {
+    padding-right: 10px;
+}
+.grid-inner {
+    padding-left: 10px;
+    padding-right: 10px;
+}
+.grid-right {
+    padding-left: 10px;
+}

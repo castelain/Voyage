@@ -3,33 +3,24 @@
         <my-header slot="my-header" id="nav"></my-header>
 
         <single-banner :img="img" id="banner"></single-banner>
+
         <my-row>
-            <my-patter :title="title1" slot="content"></my-patter>
-        </my-row>
-        <my-row>
-            <slide-images :imgs="travelData" :btnText="btnText" :path="path" slot="content"></slide-images>
-        </my-row>
-        <my-row>
-            <my-ad :ad="ad1" slot="content"></my-ad>
-        </my-row>
-        <my-row>
-            <my-patter :title="title2" slot="content"></my-patter>
-        </my-row>
-        <my-row v-for="(item, index) in activityData" :key="index">
-            <my-card-horizontal :data="item" slot="content" >
-            </my-card-horizontal>
-        </my-row>
-        <my-row>
-            <my-ad :ad="ad2" slot="content"></my-ad>
-        </my-row>
-        <my-row>
-            <my-patter :title="title3" slot="content">
-                <span v-html="subTitle">
-                </span>
-            </my-patter>
-        </my-row>
-        <my-row>
-            <my-photos slot="content" :imgs="imgs"></my-photos>
+            <div slot="content">
+                <my-patter :title="title1"></my-patter>
+                <slide-images :imgs="travelData" :btnText="btnText" :path="path"></slide-images>
+                <my-ad :ad="ad1"></my-ad>
+                <my-patter :title="title2"></my-patter>
+                 <div v-for="(item, index) in activityData" :key="index">
+                    <my-card-horizontal :data="item">
+                    </my-card-horizontal>
+                </div>
+                <my-ad :ad="ad2"></my-ad>
+                 <my-patter :title="title3">
+                    <span v-html="subTitle">
+                    </span>
+                </my-patter>
+                <my-photos :imgs="imgs"></my-photos>
+            </div>
         </my-row>
         
         <my-footer slot="my-footer"></my-footer>

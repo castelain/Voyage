@@ -63,12 +63,12 @@
                             <img src="../../assets/images/plane-ticket/fire.png" alt="国际特价">
                             &nbsp;国际特价
                         </span>
-                         <el-row :gutter="20" style="margin-top: 20px;">
-                            <el-col :span="8" v-for="(ticket, index) in abroadTickets" :key="index">
+                         <el-row style="margin-top: 20px;">
+                            <el-col :span="8" v-for="(ticket, index) in abroadTickets" :key="index" class="grid-inner">
                                 <my-ticket :ticket="ticket"></my-ticket>
                             </el-col>
                         </el-row>
-                        <my-button btnText="查 看 更 多" path="#"></my-button>
+                        <my-button btnText="查 看 更 多" path="#" style="margin-top: 30px;"></my-button>
                     </el-tab-pane>
                     <el-tab-pane label="北美">
                     </el-tab-pane>
@@ -87,12 +87,12 @@
                             <img src="../../assets/images/plane-ticket/fire.png" alt="境内特价">
                             &nbsp;境内特价
                         </span>
-                         <el-row :gutter="20" style="margin-top: 20px;">
-                            <el-col :span="8" v-for="(ticket, index) in abroadTickets" :key="index">
+                         <el-row style="margin-top: 20px;">
+                            <el-col :span="8" v-for="(ticket, index) in abroadTickets" :key="index" class="grid-inner">
                                 <my-ticket :ticket="ticket"></my-ticket>
                             </el-col>
                         </el-row>
-                        <my-button btnText="查 看 更 多" path="#" style="margin-bottom: 10%;"></my-button>
+                        <my-button btnText="查 看 更 多" path="#" style="margin-bottom: 10%; margin-top: 30px;"></my-button>
                     </el-tab-pane>
                     <el-tab-pane label="北京">
                     </el-tab-pane>

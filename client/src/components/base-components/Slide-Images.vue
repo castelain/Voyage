@@ -1,23 +1,14 @@
 <template>
     <div>
-        <el-row :gutter="20" >
+        <el-row>
             <el-col :span="8"
                     v-for="(img, index) in imgs2" 
                     :key="index">
-                <my-card-vertical
-                        :img="img">
+                <my-card-vertical :img="img">
                 </my-card-vertical>
             </el-col>
         </el-row>
-
-        <!-- <el-row :gutter="20">
-            <el-col :span="8">
-
-            </el-col>
-            <el-col :span="8"></el-col>
-        </el-row> -->
         
-
         <hr>
         <div class="btns">
             <el-button icon="el-icon-arrow-left" @click="forward" class="left" circle>
@@ -31,6 +22,7 @@
 
 <script>
 import 'element-ui/lib/theme-chalk/display.css'
+import "element-ui/lib/theme-chalk/index.css"
 export default {
     name: 'SlideImages',
     props: [ 'imgs', 'btnText', 'path' ],
@@ -69,5 +61,15 @@ export default {
 <style scoped>
     .btns {
         margin-top: 40px;
+    }
+    .el-col:last-child {
+        padding-left: 10px;
+    }
+    .el-col:first-child {
+        padding-right: 10px;
+    }
+    .el-col:nth-child(2) {
+        padding-left: 10px;
+        padding-right: 10px;
     }
 </style>

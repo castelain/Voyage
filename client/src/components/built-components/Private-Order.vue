@@ -11,8 +11,8 @@
         </my-row>
         <my-row>
             <div slot="content">
-                <el-row :gutter="20">
-                    <el-col :span="6" v-for="(icon, index) in process.icons" :key="index">
+                <el-row>
+                    <el-col :span="6" v-for="(icon, index) in process.icons" :key="index" class="grid-inner">
                         <my-card-icon :icon="icon"></my-card-icon>
                     </el-col>
                 </el-row>
@@ -23,8 +23,8 @@
             <my-patter :title="service.title" slot="content" style="margin-top: 80px;"></my-patter>
         </my-row>
         <my-row>
-            <el-row slot="content" :gutter="20">
-                <el-col :span="12" v-for="(img, index) in service.imgs" :key="index">
+            <el-row slot="content">
+                <el-col :span="12" v-for="(img, index) in service.imgs" :key="index" class="grid-inner">
                     <my-card-simple :img="img"></my-card-simple>
                 </el-col>
             </el-row>
@@ -34,8 +34,8 @@
             <my-patter :title="cases.title" slot="content" style="margin-top: 40px;"></my-patter>
         </my-row>
         <my-row>
-            <el-row slot="content" :gutter="20">
-                <el-col :span="8" v-for="(img, index) in cases.imgs" :key="index">
+            <el-row slot="content">
+                <el-col :span="8" v-for="(img, index) in cases.imgs" :key="index" class="grid-inner">
                     <my-card-simple :img="img"></my-card-simple>
                 </el-col>
             </el-row>
@@ -47,7 +47,7 @@
             width="50%"
             @close="dialogVisible1 = false" center>
             <div slot="title">
-                <img src="../../assets/images/home/logo.png" alt="logo" id="logo" class="hidden-md-and-down">
+                <img src="../../assets/images/private-order/椭圆1.png" alt="logo" id="logo" class="hidden-md-and-down">
                 <p class="dialog-title">{{ title1 }}</p>
             </div>
             <div class="dialog-content">

@@ -17,8 +17,8 @@
         </my-row>
         <my-row>
             <div slot="content">
-                <el-row :gutter="20">
-                    <el-col :span="6" v-for="(icon, index) in corporation.icons" :key="index">
+                <el-row>
+                    <el-col :span="6" v-for="(icon, index) in corporation.icons" :key="index" class="grid-inner">
                         <my-card-icon :icon="icon" class="icon"></my-card-icon>
                     </el-col>
                 </el-row>

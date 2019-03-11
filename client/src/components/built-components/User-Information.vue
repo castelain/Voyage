@@ -75,8 +75,8 @@
                 </el-row>
                 
                 <h3 style="text-align: left;">您可能感兴趣的目的地</h3>
-                <el-row :gutter="20" class="places">
-                    <el-col :span="8" v-for="(place, index) in places" :key="index">
+                <el-row class="places">
+                    <el-col :span="8" v-for="(place, index) in places" :key="index" class="grid-inner">
                         <router-link :to="place.path">
                             <img :src="place.src" :alt="place.title">
                             <p>{{ place.title }}</p>
@@ -185,6 +185,7 @@ export default {
     }
     .tickets{
         font-size: 16px;
+        margin-bottom: 10px;
     }
     .tickets span {
         color: orange;

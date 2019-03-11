@@ -19,8 +19,8 @@
         </my-row>
             
         <my-row>
-            <el-row :gutter="70" slot="content">
-                <el-col :span="9" id="side">
+            <el-row slot="content">
+                <el-col :span="9" id="side" style="padding-right: 80px;">
                     <el-row>
                         <el-col :span="24">
                             <my-fieldset title="THE DETAILS" id="details">
