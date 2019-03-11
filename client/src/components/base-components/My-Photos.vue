@@ -5,8 +5,8 @@
                 <el-row>
                     <el-col :span="24">
                         <router-link to="#">
-                            <el-tooltip class="item" effect="dark" content="土著习俗" placement="top">
-                                <img src="../../assets/images/home/p1.png">
+                            <el-tooltip class="item" effect="dark" :content="imgs[0].msg" placement="top">
+                                <img :src="imgs[0].src">
                             </el-tooltip>
                         </router-link>
                     </el-col>
@@ -14,8 +14,8 @@
                 <el-row>
                     <el-col :span="24">
                         <router-link to="#">
-                            <el-tooltip class="item" effect="dark" content="非洲歌舞，热情四射" placement="top">
-                                <img src="../../assets/images/home/p3.png">
+                            <el-tooltip class="item" effect="dark" :content="imgs[1].msg" placement="top">
+                                <img :src="imgs[1].src">
                             </el-tooltip>
                         </router-link>
                     </el-col>
@@ -23,8 +23,8 @@
                 <el-row>
                     <el-col :span="24">
                         <router-link to="#">
-                            <el-tooltip class="item" effect="dark" content="享受海岛日光浴" placement="top">
-                                <img src="../../assets/images/home/1.jpeg">
+                            <el-tooltip class="item" effect="dark" :content="imgs[2].msg" placement="top">
+                                <img :src="imgs[2].src">
                                 <!--  style="transform: scale(1, 1.23); margin-top: 30px;" -->
                             </el-tooltip>
                         </router-link>
@@ -35,8 +35,8 @@
                 <el-row style="margin-bottom: -20px;">
                     <el-col :span="24">
                         <router-link to="#">
-                            <el-tooltip class="item" effect="dark" content="浅书小文，休憩时光" placement="top">
-                                <img src="../../assets/images/home/p2.png">
+                            <el-tooltip class="item" effect="dark" :content="imgs[3].msg" placement="top">
+                                <img :src="imgs[3].src">
                             </el-tooltip>
                         </router-link>
                     </el-col>
@@ -46,8 +46,8 @@
                         <el-row>
                             <el-col :span="24"  style="margin-top: 20px;">
                                 <router-link to="#">
-                                    <el-tooltip class="item" effect="dark" content="水石嬉戏" placement="top">
-                                        <img src="../../assets/images/home/p4.png">
+                                    <el-tooltip class="item" effect="dark" :content="imgs[4].msg" placement="top">
+                                        <img :src="imgs[4].src">
                                     </el-tooltip>
                                 </router-link>
                             </el-col>
@@ -55,8 +55,8 @@
                         <el-row>
                             <el-col :span="24">
                                 <router-link to="#">
-                                    <el-tooltip class="item" effect="dark" content="Poilane" placement="top">
-                                        <img src="../../assets/images/home/p7.png">
+                                    <el-tooltip class="item" effect="dark" :content="imgs[5].msg" placement="top">
+                                        <img :src="imgs[5].src">
                                     </el-tooltip>
                                 </router-link>
                             </el-col>
@@ -66,8 +66,8 @@
                         <el-row>
                             <el-col :span="24"  style="margin-top: 20px;">
                                 <router-link to="#">
-                                    <el-tooltip class="item" effect="dark" content="海边景观" placement="top">
-                                        <img src="../../assets/images/home/p5.png">
+                                    <el-tooltip class="item" effect="dark" :content="imgs[6].msg" placement="top">
+                                        <img :src="imgs[6].src">
                                     </el-tooltip>
                                 </router-link>
                             </el-col>
@@ -75,8 +75,8 @@
                         <el-row>
                             <el-col :span="24">
                                 <router-link to="#">
-                                <el-tooltip class="item" effect="dark" content="一人远行出海" placement="top">
-                                    <img src="../../assets/images/home/p8.png">
+                                <el-tooltip class="item" effect="dark" :content="imgs[7].msg" placement="top">
+                                    <img :src="imgs[7].src">
                                 </el-tooltip>
                             </router-link>
                             </el-col>
@@ -85,7 +85,7 @@
                 </el-row>
             </el-col> 
         </el-row>
-        <my-button btnText="欣赏更多" style="margin-bottom: 100px;"></my-button>
+        <my-button btnText="欣赏更多" class="last-bottom"></my-button>
 
     </div>
 </template>
@@ -93,6 +93,7 @@
 <script>
 export default {
     name: 'MyPhotos',
+    props: [ 'imgs' ],
     data () {
         return {
 

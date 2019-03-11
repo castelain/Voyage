@@ -5,17 +5,25 @@
                     v-for="(img, index) in imgs2" 
                     :key="index">
                 <my-card-vertical
-                        :img="img" 
-                        :isSlideLeft='isSlideLeft' :isSlideRight="isSlideRight">
+                        :img="img">
                 </my-card-vertical>
             </el-col>
         </el-row>
+
+        <!-- <el-row :gutter="20">
+            <el-col :span="8">
+
+            </el-col>
+            <el-col :span="8"></el-col>
+        </el-row> -->
+        
+
         <hr>
         <div class="btns">
-            <el-button icon="el-icon-arrow-left" @click="forward" id="left-btn" circle>
+            <el-button icon="el-icon-arrow-left" @click="forward" class="left" circle>
             </el-button>
             <my-button :btnText="btnText" :path="path"></my-button>
-            <el-button icon="el-icon-arrow-right" @click="back" id="right-btn" circle>
+            <el-button icon="el-icon-arrow-right" @click="back" class="right" circle>
             </el-button>
         </div>
     </div>
@@ -30,8 +38,6 @@ export default {
         return {
             imgs1: this.imgs, // 用于记录传入的参数 imgs 以及操作后的完整数据值（数组）
             imgs2: this.imgs.slice(0,3),    // 用于组件中需要的部分数据值
-            isSlideLeft: null,
-            isSlideRight: null
         }
     },
     methods: {
@@ -45,12 +51,8 @@ export default {
             tempArr[tempArr.length-1] = itemFirst;
             this.imgs1 = tempArr.slice();
             this.imgs2 = tempArr.slice(0,3);
-            // setTimeout(function(){
-            //     this.isSlideLeft = null;
-            // }, 500);
         },
         back: function() {
-            // this.isSlideRight = true;
             let tempArr = this.imgs1.slice();
             let itemLast = tempArr[tempArr.length-1];
             for(let j = tempArr.length - 1; j > 0 ; j --){
@@ -59,24 +61,13 @@ export default {
             tempArr[0] = itemLast;
             this.imgs1 = tempArr.slice();
             this.imgs2 = tempArr.slice(-3);
-            // setTimeout(function(){
-            //     this.isSlideRight = null;
-            // }, 500);
         }
     }
 }
 </script>
 
 <style scoped>
-    #left-btn {
-        float: left;
-    }
-    #right-btn {
-        float: right;
-    }
     .btns {
         margin-top: 40px;
-        /* margin-bottom: 80px; */
     }
-
 </style>

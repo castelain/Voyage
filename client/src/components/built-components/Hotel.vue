@@ -4,7 +4,7 @@
 
         <el-row id="form-banner">
             <el-col :span="24" id="banner-Form">
-                <single-banner :img="img" id="banner"></single-banner>
+                <single-banner :img="img" id="banner" style="width: 100%;"></single-banner>
                 <my-row>
                     <el-tabs type="card" slot="content" id="form">
                         <el-tab-pane label="单间">
@@ -46,7 +46,9 @@
                                     type="datetime"
                                     placeholder="退房时间">
                                 </el-date-picker>
-                                <el-button type="warning" @click="onSubmit">搜索</el-button>
+                                <el-button type="warning" @click="onSubmit">
+                                    <router-link to="/hotel-search">搜索</router-link>
+                                </el-button>
                             </el-form>
                         </el-tab-pane>
                     </el-tabs>
@@ -107,7 +109,7 @@ export default {
             hotels: [
                 {
                     src: require('../../assets/images/hotel/1.jpg'),
-                    path: '#',
+                    path: '/hotel-detail',
                     msg: {
                         point: 'KOHH LANTA',
                         title: '甲 米 利 亚 纳 休 闲 水 疗 度 假 村',
@@ -182,23 +184,27 @@ export default {
         };
     },
     methods: {
-            onSubmit: function() {
-                if(!this.form.city){
-                    this.$message({
-                        type: 'error',
-                        message: '城市不可为空'
-                    });
-                }else{
-                    this.$router.push('/hotel-search');
-                }
+        onSubmit: function() {
+            if(!this.form.city){
+                this.$message({
+                    type: 'error',
+                    message: '城市不可为空'
+                });
+            }else{
+                // this.$message({
+                //     type: 'success',
+                //     message: '搜索数据提交成功'
+                // });
+                this.$router.push( '/hotel-search' );
             }
-        },
-        mounted() {
-            let nav = document.getElementById('nav');
-            this.navHeight = window.getComputedStyle(nav).height;
-            document.getElementById('form-banner').style.marginTop = this.navHeight;
-        },
-    }
+        }
+    },
+    mounted() {
+        let nav = document.getElementById('nav');
+        this.navHeight = window.getComputedStyle(nav).height;
+        document.getElementById('form-banner').style.marginTop = this.navHeight;
+    },
+}
 </script>
 
 <style scoped>

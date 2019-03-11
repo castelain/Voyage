@@ -29,7 +29,7 @@
             </my-patter>
         </my-row>
         <my-row>
-            <my-photos slot="content"></my-photos>
+            <my-photos slot="content" :imgs="imgs"></my-photos>
         </my-row>
         
         <my-footer slot="my-footer"></my-footer>
@@ -37,7 +37,6 @@
 </template>
 
 <script>
-import SingleBanner from '@/components/base-components/Single-Banner'
 import SlideImages from '@/components/base-components/Slide-Images'
 import MyPhotos from '@/components/base-components/My-Photos'
 export default {
@@ -123,10 +122,45 @@ export default {
             title3: '完美瞬间',
             subTitle: `由VOYAGE<br>活动体验游客拍摄`,
             
+            // 拼图照片数据
+            imgs: [
+                {
+                    msg: '土著习俗',
+                    src: require('../../assets/images/home/p1.png')
+                },
+                {
+                    msg: '非洲歌舞，热情四射',
+                    src: require('../../assets/images/home/p3.png')
+                },
+                {
+                    msg: '享受海岛日光浴',
+                    src: require('../../assets/images/home/1.jpeg')
+                },
+                {
+                    msg: '浅书小文，休憩时光',
+                    src: require('../../assets/images/home/p2.png')
+                },
+                {
+                    msg: '水石嬉戏',
+                    src: require('../../assets/images/home/p4.png')
+                },
+                {
+                    msg: 'Poilane',
+                    src: require('../../assets/images/home/p7.png')
+                },
+                {
+                    msg: '海边景观',
+                    src: require('../../assets/images/home/p5.png')
+                },
+                {
+                    msg: '一人远行出海',
+                    src: require('../../assets/images/home/p8.png')
+                },
+
+            ]
         }
     },
     components: {
-        'single-banner': SingleBanner,
         'slide-images': SlideImages,
         'my-photos': MyPhotos
     },

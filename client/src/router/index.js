@@ -14,6 +14,7 @@ import FujiActivity from '@/components/built-components/Fuji-Activity'
 import PlaneTicket from '@/components/built-components/Plane-Ticket'
 import Hotel from '@/components/built-components/Hotel'
 import HotelSearch from '@/components/built-components/Hotel-Search'
+import HotelDetail from '@/components/built-components/Hotel-Detail'
 
 Vue.use(Router)
 
@@ -88,6 +89,11 @@ export default new Router({
       path: '/hotel-search',
       name: 'hotel-search',
       component: HotelSearch
+    },
+    {
+      path: '/hotel-detail',
+      name: 'hotel-detail',
+      component: HotelDetail
     }
   ]
 })

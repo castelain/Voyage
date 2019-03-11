@@ -24,23 +24,23 @@
                     <el-row>
                         <el-col :span="24">
                             <my-fieldset title="THE DETAILS" id="details">
-                                <p>Kudadoo Island</p>
-                                <p>Lhaviyani Atoll 07080</p>
-                                <p>Maldives</p>
+                                <p v-for="(point, index) in points" :key="index">
+                                    {{ point }}
+                                </p>
                             </my-fieldset>
                         </el-col>
                     </el-row>
                     <el-row>
                         <el-col :span="24">
                             <my-fieldset title="AT A GLANCE" id="glance">
-                                <el-button size="mini" plain v-for="(text, index) in ['Resort','Spa','Pool','Gym','Water']" :key="index">{{ text }}</el-button>
+                                <el-button size="mini" plain v-for="(text, index) in services" :key="index">{{ text }}</el-button>
                             </my-fieldset>
                         </el-col>
                     </el-row>
                     <el-row class="hidden-sm-and-down">
                         <el-col :span="24">
                             <my-fieldset title="SEE MORE" id="more">
-                                <el-button size="mini" type="info" v-for="(text, index) in ['Maldives','Indian Ocean','Asia','Hotels','Travel', 'the Beach', 'the Coast', 'Remote Retreats']" :key="index">{{ text }}</el-button>
+                                <el-button size="mini" type="info" v-for="(text, index) in comments" :key="index">{{ text }}</el-button>
                             </my-fieldset>
                         </el-col>
                     </el-row>
@@ -80,7 +80,7 @@
                     <el-row>
                         <el-col :span="24" style="color: rgb(160, 160, 160);">
                             <p>15 environmentally conscious one- and two-bedroom residences sit above a tranquil and beautiful lagoon with unobstructed ocean views, bedecked with stylish oak floors and handcrafted furniture, large infiniture plunge pools and modern technological necessities.</p>
-                            <p style="margin-top: 30px;">Vistit&nbsp;&nbsp;&nbsp;<a href="#" style="color: rgb(160, 160, 160);">kudadoo.com</a></p>
+                            <p style="margin-top: 30px; margin-bottom: 80px;">Vistit&nbsp;&nbsp;&nbsp;<a href="#" style="color: rgb(160, 160, 160);">kudadoo.com</a></p>
                         </el-col>
                     </el-row>
                     <el-row>
@@ -98,7 +98,7 @@
 
 <script>
 export default {
-    name: 'Travel-Detail',
+    name: 'TravelDetail',
     data () {
         return {
             // 二级导航数据
@@ -138,6 +138,10 @@ export default {
                     detailPath: '#'
                 },
             ],
+            // 侧边栏数据
+            points: [ 'Kudadoo Island', 'Lhaviyani Atoll 07080', 'Maldives' ],
+            services: ['Resort','Spa','Pool','Gym','Water'],
+            comments: ['Maldives','Indian Ocean','Asia','Hotels','Travel', 'the Beach', 'the Coast', 'Remote Retreats'],
             // 广告信息
             adMsg: {
                 point: 'PRIVATE ISLAND',
@@ -165,9 +169,11 @@ export default {
 
 <style scoped>
     .share {
-        margin-top: 80px;
+        margin: 10% auto;
         text-align: center;
-        margin-bottom: 20px;
+    }
+    .share button {
+        margin-left: 50%;
     }
     #side button {
         margin-top: 10px;
