@@ -169,7 +169,7 @@ export default {
                 },
                 {
                     msg: '阳光、沙滩，还有...',
-                    src: require('../../assets/images/hotel-detail/xiaotu7.jpg')
+                    src: require('../../assets/images/hotel-detail/xiaotu7.png')
                 },
                 {
                     msg: '啥，会晒黑？',

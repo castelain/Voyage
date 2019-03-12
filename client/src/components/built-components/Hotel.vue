@@ -88,7 +88,7 @@ export default {
             navHeight: null,
             // banner图数据
             img: {
-                src: require('../../assets/images/hotel/banner.jpg'),
+                src: require('../../assets/images/hotel/banner.png'),
                 msg: '活动 banner',
                 detailPath: '#'
             },
@@ -216,7 +216,7 @@ export default {
        bottom: 120%;
        left: 20%;
        width: 60%;
-       background-color: rgba(255, 255, 255, .2);
+       background-color: rgba(0, 0, 0, .2);
        padding-bottom: 20px;
        border: none;
     }

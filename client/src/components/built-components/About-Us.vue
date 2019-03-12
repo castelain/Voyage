@@ -88,22 +88,22 @@ export default {
                 icons: [
                     {
                         title: '商务合作',
-                        src: require('../../assets/images/about-us/icon-shangwu.jpg'),
+                        src: require('../../assets/images/about-us/icon-shangwu.png'),
                         info: '欢迎各大酒店、机票、景点票务中心浅谈合作'
                     },
                     {
                         title: '媒体合作',
-                        src: require('../../assets/images/about-us/icon-meiti.jpg'),
+                        src: require('../../assets/images/about-us/icon-meiti.png'),
                         info: '欢迎各大媒体网站与VOYAGE合作交流'
                     },
                     {
                         title: '品牌合作',
-                        src: require('../../assets/images/about-us/icon-pinpai.jpg'),
+                        src: require('../../assets/images/about-us/icon-pinpai.png'),
                         info: '欢迎各跨界大企业与VOYAGE合作交流'
                     },
                     {
                         title: '推广合作',
-                        src: require('../../assets/images/about-us/icon-tuiguang.jpg'),
+                        src: require('../../assets/images/about-us/icon-tuiguang.png'),
                         info: '欢迎各品牌网站代理及网络联盟洽谈广告推广合作。'
                     }
                 ] 

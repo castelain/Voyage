@@ -48,7 +48,7 @@ export default {
             path: '/recomment-travel',
             travelData: [
                 {
-                    src: require('../../assets/images/home/travel1.png'),
+                    src: require('../../assets/images/home/travel1-1.png'),
                     path: '#',
                     msg: {
                         point: 'TAIWAN101',
@@ -68,7 +68,7 @@ export default {
                     }
                 },
                 {
-                    src: require('../../assets/images/home/travel3.png'),
+                    src: require('../../assets/images/home/travel3-1.png'),
                     path: '/travel-detail',
                     msg: {
                         point: 'PRIVATE ISLAND',
@@ -125,7 +125,7 @@ export default {
                 },
                 {
                     msg: '享受海岛日光浴',
-                    src: require('../../assets/images/home/1.jpeg')
+                    src: require('../../assets/images/home/1.png')
                 },
                 {
                     msg: '浅书小文，休憩时光',
@@ -145,7 +145,7 @@ export default {
                 },
                 {
                     msg: '一人远行出海',
-                    src: require('../../assets/images/home/p8.png')
+                    src: require('../../assets/images/home/p8-1.png')
                 },
 
             ]

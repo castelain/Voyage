@@ -103,12 +103,12 @@ export default {
             },
             icons: [
                 {
-                    src: require('../../assets/images/user-information/vip.jpg'),
+                    src: require('../../assets/images/user-information/vip.png'),
                     title: '会员俱乐部',
                     info: ''
                 },
                 {
-                    src: require('../../assets/images/user-information/huiyuan.jpg'),
+                    src: require('../../assets/images/user-information/huiyuan.png'),
                     title: '会员权益',
                     info: ''
                 },

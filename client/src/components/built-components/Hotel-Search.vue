@@ -25,7 +25,6 @@
                             &nbsp;境内特价
                         </span>
                         <hotel-search-tab1></hotel-search-tab1>
-                        
                     </el-tab-pane>
                     <el-tab-pane label="按城市搜索">
                     </el-tab-pane>

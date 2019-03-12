@@ -15,6 +15,7 @@ import PlaneTicket from '@/components/built-components/Plane-Ticket'
 import Hotel from '@/components/built-components/Hotel'
 import HotelSearch from '@/components/built-components/Hotel-Search'
 import HotelDetail from '@/components/built-components/Hotel-Detail'
+import NotFound from '@/components/built-components/NotFound'
 
 Vue.use(Router)
 
@@ -94,6 +95,10 @@ export default new Router({
       path: '/hotel-detail',
       name: 'hotel-detail',
       component: HotelDetail
+    },
+    {
+      path: '*',
+      component: NotFound
     }
   ]
 })

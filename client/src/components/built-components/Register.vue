@@ -2,7 +2,7 @@
   <my-row class="bg">
     <el-form :model="form" ref="form" :rules="rules" slot="content">
       <router-link to="/">
-        <img src="../../assets/images/home/logo.png" alt="logo">
+        <img src="../../assets/images/login/login-logo.png" alt="logo">
       </router-link>
       <p class="title">注册VOYAGE，以远方为名起航</p>
       <el-row :gutter="20">

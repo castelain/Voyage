@@ -63,6 +63,7 @@ export default {
         }
     },
     mounted() {
+        console.log(this.$route);
         let el = document.getElementById('中文');
         let links = el.getElementsByTagName('a');
         links[0].style.color = 'rgb(191,191,191)';
