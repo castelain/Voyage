@@ -50,7 +50,7 @@
                                 <img :src="adMsg.src" :alt="adMsg.title">
                                 <div class="text-block">
                                     <div>
-                                        <span class="text-bold">TESTED</span>
+                                        <span class="text-bold">KUDADOO </span>
                                         <span class="text-light">&nbsp;in&nbsp;</span>
                                         <span class="text-bold">{{ adMsg.point }}</span>
                                     </div>
@@ -181,9 +181,6 @@ export default {
     .text-block {
         text-align: center;
         margin-top: 20px;
-        margin-left: 0;
-        text-align: left;
-        margin-left: 20px;
     }
     .text-bold {
         font-weight: bold;
@@ -220,7 +217,6 @@ export default {
         text-align: center;
     }
     .text-block {
-        text-align: center;
-        margin-top: 20px;
+
     }
 </style>

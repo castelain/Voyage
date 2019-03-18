@@ -64,7 +64,7 @@
                             <p>{{ description2 }}</p>
                         </el-col>
                     </el-row>
-                    <my-button btnText="SHARE" id="share"></my-button>
+                    <my-button btnText="ORDER NOW" id="share"></my-button>
                 </el-col>
             </el-row>       
         </my-row>

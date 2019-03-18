@@ -29,7 +29,6 @@
                 </el-menu-item>
             </el-menu>
         </my-row>
-
     </div>
 </template>
 
