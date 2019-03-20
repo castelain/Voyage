@@ -47,7 +47,7 @@
                                     placeholder="退房时间">
                                 </el-date-picker>
                                 <el-button type="warning" @click="onSubmit">
-                                    <router-link to="/hotel-search">搜索</router-link>
+                                    搜索
                                 </el-button>
                             </el-form>
                         </el-tab-pane>
