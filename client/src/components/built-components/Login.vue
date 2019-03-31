@@ -11,7 +11,7 @@
             <el-input v-model="form.phone" placeholder="手机号"></el-input>
           </el-form-item>
           <el-form-item prop="password">
-              <el-input v-model="form.password" placeholder="设置密码" show-password></el-input>
+              <el-input v-model="form.password" placeholder="密码" show-password></el-input>
           </el-form-item>
 
           <el-checkbox
