@@ -86,7 +86,6 @@ export default {
 </script>
 
 <style scoped>
-/* 导航栏间距：45, 25 */
     * {
         color: #333333;
     }
