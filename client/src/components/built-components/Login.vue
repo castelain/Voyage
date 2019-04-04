@@ -50,7 +50,7 @@ export default {
       rules: {
         phone: [
           { required: true, message: "请输入号码", trigger: "blur" },
-        { pattern: /^1[34578]\d{9}$/, message: "请输入正确的电话号码", trigger: "blur" }
+          { pattern: /^1[34578]\d{9}$/, message: "请输入正确的电话号码", trigger: "blur" }
         ], 
         password: [
           { required: true, message: "密码不可为空", trigger: "blur" }
