@@ -172,9 +172,6 @@ export default {
         margin: 10% auto;
         text-align: center;
     }
-    .share button {
-        margin-left: 50%;
-    }
     #side button {
         margin-top: 10px;
     }

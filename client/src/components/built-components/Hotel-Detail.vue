@@ -64,7 +64,7 @@
                             <p>{{ description2 }}</p>
                         </el-col>
                     </el-row>
-                    <my-button btnText="ORDER NOW" id="share"></my-button>
+                    <my-button btnText="立 即 购 买" id="share"></my-button>
                 </el-col>
             </el-row>       
         </my-row>
@@ -197,12 +197,10 @@ export default {
 </script>
 
 <style scoped>
-     .share {
-        margin: 20px auto;
+    #share {
+        margin: 10% auto;
+        margin-bottom: -10%;
         text-align: center;
-    }
-    .share button {
-        margin-left: 50%;
     }
     #side button {
         margin-top: 10px;
