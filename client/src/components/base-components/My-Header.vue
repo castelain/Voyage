@@ -52,7 +52,7 @@ export default {
                 { msg: '酒店', src: '/hotel' },
                 { msg: '机票', src: '/plane-ticket' },
                 { msg: '活动体验', src: '/activity'},
-                { msg: '私人订制', src: '/private-order' }
+                { msg: '私人定制', src: '/private-order' }
             ],
         }
     },
