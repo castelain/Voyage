@@ -26,7 +26,7 @@ export default {
 
 <style scoped>
     * {
-        margin-top: 80px;
+        margin-top: 6%;
     }
     img {
         width: 100%;

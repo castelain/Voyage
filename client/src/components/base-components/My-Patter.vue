@@ -36,8 +36,8 @@ export default {
 
 <style scoped>
     .patter {
-        margin-top: 80px;
-        margin-bottom: 25px;
+        margin-top: 8%;
+        margin-bottom: 2%;
     }
     .left-line {
         float: left;
