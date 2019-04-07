@@ -149,4 +149,7 @@ export default {
         margin-top: 50px;
         margin-bottom: 30px;
     }
+    .el-row {
+        overflow-x: hidden;
+    }
 </style>

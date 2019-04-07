@@ -168,7 +168,7 @@ export default {
 </script>
 
 <style scoped>
-    .share {
+    #share {
         margin: 10% auto;
         text-align: center;
     }
@@ -215,8 +215,5 @@ export default {
     }
     #ad {
         text-align: center;
-    }
-    .text-block {
-
     }
 </style>

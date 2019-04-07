@@ -109,7 +109,7 @@ export default {
         margin-bottom: 0;
     }
     img {
-        width: 100%; 
+        width: 100%;
     }
     .last-bottom {
         margin-top: 6%;

@@ -312,4 +312,7 @@ export default {
         position: fixed;
         top: 15%;
     }
+    .el-row {
+        overflow-x: hidden;
+    }
 </style>

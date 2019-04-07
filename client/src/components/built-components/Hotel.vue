@@ -59,7 +59,7 @@
         <my-row>
             <div slot="content">
                 <my-patter :title="title"></my-patter>
-                <el-row>
+                <el-row style="overflow-x: hidden;">
                     <el-col :span="8" v-for="(hotel, index) in hotels" :key="index" class="grid-inner">
                         <my-card-vertical :img="hotel">
                         </my-card-vertical>
@@ -248,4 +248,7 @@ export default {
        font-weight: bold;
        margin-left: 10px;
    }
+    .el-row {
+        /* overflow-x: hidden; */
+    }
 </style>

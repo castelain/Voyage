@@ -164,5 +164,7 @@ export default {
 </script>
 
 <style scoped>
-
+    .el-row {
+        overflow-x: hidden;
+    }
 </style>
